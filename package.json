@@ -7,11 +7,10 @@
   "author": "e3ndr",
   "license": "MIT",
   "build": {
-    "icon": "static/favicon.png",
-    "productName": "Electron + Sapper App (Rollup)",
+    "productName": "Electron + SvelteKit App",
     "files": [
-      "build/export/**/*",
-      "main.js"
+      "build/**/*",
+      "main.cjs"
     ]
   },
   "scripts": {
