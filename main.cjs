@@ -4,7 +4,7 @@ const path = require("path");
 
 // Used in the packaged environment.
 const serve = require("electron-serve");
-const loadURL = serve({ directory: "__sapper__/export" });
+const loadURL = serve({ directory: "export" });
 
 // Keep a global reference of the window object. If you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -12,7 +12,7 @@ let mainWindow;
 
 const isDev = !app.isPackaged;
 
-const baseDir = isDev ? path.join(process.cwd(), "static") : path.join(__dirname, "__sapper__/export");
+const baseDir = isDev ? path.join(process.cwd(), "static") : path.join(__dirname, "export");
 
 function createWindow() {
     // Create the browser window.
@@ -22,7 +22,7 @@ function createWindow() {
         webPreferences: {
             nodeIntegration: true
         },
-        icon: path.join(baseDir, "logo-512.png"),
+        icon: path.join(baseDir, "favicon.png"),
         show: false
     });
 
